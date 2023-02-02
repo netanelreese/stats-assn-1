@@ -273,6 +273,58 @@ pie3D(rtab,labels=list("OK","Defective"),main="pie plot of SWD")
 
 # Problem 11
 
+
+
+### a)
+
+```{r}
+volt=read.csv("VOLTAGE.csv")
+#head(volt)
+old<-subset(volt,subset=LOCATION=="OLD")
+old$VOLTAGE->vto
+vto
+max(vto)
+min(vto)
+lept<-min(vto)-0.05
+rept<-max(vto)+0.05
+rnge<-rept-lept
+inc<-rnge/9
+inc
+seq(lept, rept,by=inc)->cl
+cl
+cvto<-cut(vto,breaks=cl)
+new.tab=table(cvto)
+barplot(new.tab,space=0,main="Frequency Histogram(OLD)",las=2)
+hist(vto,nclass=10)
+```
+
+### b)
+
+```{r}
+st = stem(vto)
+```
+
+### c)
+
+```{r}
+new<-subset(volt,subset=LOCATION=="NEW")
+new$VOLTAGE->vtn
+vtn
+max(vtn)
+min(vtn)
+lept<-min(vtn)-0.05
+rept<-max(vtn)+0.05
+rnge<-rept-lept
+inc<-rnge/9
+inc
+seq(lept, rept,by=inc)->cl
+cl
+cvtn<-cut(vtn,breaks=cl)
+new.tab=table(cvtn)
+barplot(new.tab,space=0,main="Frequency Histogram(NEW)",las=2)
+hist(vtn,nclass=10)
+```
+
 # Problem 12
 
 # Problem 13
