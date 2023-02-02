@@ -1,0 +1,59 @@
+---
+title: "Assignment 1"
+author: "Nathanael Reese"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+    theme: spacelab
+    highlight: pygments
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Problem 1
+
+
+# Problem 2
+
+### a)
+
+### b)
+
+### c)
+
+### d)
+
+### e)
+
+### f)
+
+# Problem 3
+
+# Problem 4
+
+# Problem 5
+
+# Problem 6
+
+# Problem 7
+
+# Problem 8
+
+# Problem 9
+
+# Problem 10
+
+# Problem 11
+
+# Problem 12
+
+# Problem 13
+
+# Problem 14 
+
+# Problem 15
+
