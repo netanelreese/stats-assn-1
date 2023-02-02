@@ -16,6 +16,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Problem 1
 
+**Assignment Weights**
+
+![](gradeweights.png){ width=70% }
+
+**Final Grade**
+
+![](grades.png){ width=70% }
+
+
 
 # Problem 2
 
