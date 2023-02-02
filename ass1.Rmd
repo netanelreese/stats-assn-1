@@ -135,7 +135,52 @@ mean(catfish$DDT)
 
 # Problem 5
 
+```{r}
+mtbe=read.csv("MTBE.csv", header=TRUE) # You will need to change the address
+head(mtbe) # First six lines
+dim(mtbe) # rows and columns
+ind=sample(1:223,5,replace=FALSE) # random indices
+mtbe[ind,]
+
+```
+
+### a)
+
+#### i)
+
+```{r}
+mtbeo=na.omit(mtbe)
+```
+
+#### ii)
+
+```{r}
+sd(mtbeo[mtbeo$Aquifier=="Bedrock",]$Depth)
+
+```
+
 # Problem 6
+
+```{r}
+eq=read.csv("EARTHQUAKE.csv")
+ind=sample(1:2929,30,replace=FALSE) # random indices
+eq[ind,]
+
+```
+
+### a)
+
+#### i)
+
+```{r}
+plot(ts(eq$MAG))
+```
+
+#### ii)
+
+```{r}
+median(eq$MAG)
+```
 
 # Problem 7
 
