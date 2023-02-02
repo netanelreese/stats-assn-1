@@ -13,6 +13,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Problems Complete 2/15
 
 # Problem 1
 
@@ -87,6 +88,34 @@ mean(catfish$DDT)
 
 
 # Problem 3
+
+### a)
+
+**Quantitative**
+
+### b)
+
+**Quantitative**
+
+### c)
+
+**Qualitative**
+
+### d)
+
+**Quantitative**
+
+### e)
+
+**Qualitative**
+
+### f)
+
+**Quantitative**
+
+### g)
+
+**Qualitative**
 
 # Problem 4
 
