@@ -119,6 +119,20 @@ mean(catfish$DDT)
 
 # Problem 4
 
+### a)
+
+**sampling without replacement, stratified random sampling, cluster sampling, and systematic sampling.**
+
+### b)
+
+* Sampling Without Replacement - you select a number that has been previously selected, simply discard the duplicate and select a replacement at the end of the sequence.
+
+* Stratified Random Sampling -  Random samples of experimental units are obtained for each strata, then the units are combined to form the complete sample.
+
+* Cluster Sampling - Rather than collect a simple random sample of all lines of code in the 150 programs (which would be very difficult and costly to do), the engineer will randomly sample 10 of the 150 programs (clusters), then examine all lines of code in each sampled program.
+
+* Systematic Sampling - This method involves systematically selecting every kth experimental unit from a list of all experimental units.
+
 # Problem 5
 
 # Problem 6
