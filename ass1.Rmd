@@ -243,7 +243,33 @@ pareto(l)
 
 # Problem 9
 
+### a)
+
+```{r}
+freq=c(32,12,6)
+RL=c("Windows","Office","Explorer")
+x=rep(RL,freq)
+pie(freq,RL)
+```
+
+### b)
+
+```{r}
+pareto(x)
+```
+
 # Problem 10
+
+```{r}
+swd=read.csv("SWDEFECTS.csv", header=TRUE)
+head(swd)
+library(plotrix)
+tab=table(swd$defect)
+rtab=tab/sum(tab)
+round(rtab,2)
+pie3D(rtab,labels=list("OK","Defective"),main="pie plot of SWD")
+
+```
 
 # Problem 11
 
