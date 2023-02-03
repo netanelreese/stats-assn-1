@@ -456,13 +456,54 @@ getmode(desertplant.v)
 ### e)
 
 ```{r}
-hdep<-hist(dryplants.v)
+hdep<-hist(desertplant.v)
+n=length(desertplant.v)
+barplot(hdep$counts/n,col="white",space=0)->bp    
+axis(1,at=c(bp),labels=hdep$mids)
+title(ylab="Relative Frequency",xlab="Gobi Desert Plant Coverage")
 
-
-
+#dryplants wont plot because invalid number of breaks
 ```
 
 # Problem 14 
 
+```{r}
+galaxy=read.csv("GALAXY2.csv")
+head(galaxy)
+```
+
+### a)
+
+```{r}
+vel<-galaxy$VELOCITY
+max(vel)
+min(vel)
+lept<-min(vel)-0.05
+rept<-max(vel)+0.05
+rnge<-rept-lept
+inc<-rnge/9
+inc
+seq(lept, rept,by=inc)->cl
+cl
+cvel<-cut(vel,breaks=cl)
+new.tab=table(cvel)
+barplot(new.tab,space=0,main="Frequency Histogram(Velocity)",las=2)
+hist(vel,nclass=10)
+```
+
+### b)
+
+**Yes on the second graph there are two major peaks in the graph**
+
+### c)
+
+### d)
+
 # Problem 15
+
+```{r}
+library(dplyr)
+library(ggplot2)
+ddt%>%filter(WEIGHT > 100)%>%ggplot(aes(x=RIVER,y=LENGTH,fill=SPECIES))+geom_boxplot()+ggtitle("Nathanael Reese")
+```
 
