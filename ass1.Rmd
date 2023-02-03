@@ -33,6 +33,10 @@ ddt = read.csv("DDT.csv")
 head(ddt)
 m=with(ddt, as.numeric(factor(MILE))) # A
 length(unique(m))
+getmode <- function(v) {
+   uniqv <- unique(v)
+   uniqv[which.max(tabulate(match(v, uniqv)))]
+}
 ```
 
 ### a)
@@ -323,6 +327,75 @@ cvtn<-cut(vtn,breaks=cl)
 new.tab=table(cvtn)
 barplot(new.tab,space=0,main="Frequency Histogram(NEW)",las=2)
 hist(vtn,nclass=10)
+```
+
+### d)
+
+**No it seems the old location is better for production over the new one with the mean and median being higher at the old location**
+
+### e)
+
+```{r}
+mean(vto)
+median(vto)
+getmode(vto)
+mean(vtn)
+median(vtn)
+getmode(vtn)
+```
+
+### f)
+
+```{r}
+(10.5-mean(vto))/sd(vto)
+```
+
+### g)
+
+```{r}
+(10.5-mean(vtn))/sd(vtn)
+```
+
+### h)
+
+**A voltage of 10.5 is more likely to happen in the old location as it is 1.29 standard deviations from the mean of the data**
+
+### i)
+
+```{r}
+boxplot(vto, col="BEIGE")
+```
+
+### j)
+
+```{r}
+z=(vto-mean(vto))/sd(vto)
+z[abs(z)>=2 & abs(z)<=3]
+vto[abs(z)>=2 & abs(z)<=3]
+
+```
+
+### k)
+
+```{r}
+boxplot(vtn, col="SALMON")
+```
+
+### l)
+
+```{r}
+z=(vtn-mean(vtn))/sd(vtn)
+z[abs(z)>=2 & abs(z)<=3]
+vtn[abs(z)>=2 & abs(z)<=3]
+```
+
+### m)
+
+```{r}
+layout(matrix(1:2,nr=1,nc=2))
+boxplot(vto, col="AQUAMARINE")
+boxplot(vtn, col="SALMON")
+
 ```
 
 # Problem 12
