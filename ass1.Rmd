@@ -400,7 +400,67 @@ boxplot(vtn, col="SALMON")
 
 # Problem 12
 
+```{r}
+pipe=read.csv("ROUGHPIPE.csv")
+head(pipe)
+r=pipe$ROUGH
+
+#Standardize(transform) into z values
+z=(r-mean(r))/sd(r)
+
+#class
+class(z)
+boxplot(r[abs(z)<3], col="PINK", horizontal=TRUE)
+```
+
 # Problem 13
+
+```{r}
+ant=read.csv("GOBIANTS.csv")
+head(ant)
+```
+
+### a)
+
+```{r}
+ants= ant$AntSpecies
+mean(ants)
+median(ants)
+getmode(ants)
+```
+
+### b)
+
+
+
+### c)
+
+```{r}
+dryplants<-subset(ant,subset=Region=="Dry Steppe")
+dryplants.v=dryplants$PlantCov
+mean(dryplants.v)
+median(dryplants.v)
+getmode(dryplants.v)
+```
+
+### d)
+
+```{r}
+desertplants<-subset(ant,subset=Region=="Gobi Desert")
+desertplant.v = desertplants$PlantCov
+mean(desertplant.v)
+median(desertplant.v)
+getmode(desertplant.v)
+```
+
+### e)
+
+```{r}
+hdep<-hist(dryplants.v)
+
+
+
+```
 
 # Problem 14 
 
